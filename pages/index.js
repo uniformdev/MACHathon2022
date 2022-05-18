@@ -9,12 +9,12 @@ export default function IndexPage({ composition }) {
   return (
     <div>
       <Head>
-        <title>Shoppable Video with Cloudinary</title>
+        <title>skncre - MACHathon2022</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Composition data={composition} resolveRenderer={resolveRenderer}>
-        <Slot name="components" />
+        <Slot name="main" />
       </Composition>
     </div>
   );
@@ -24,10 +24,11 @@ export async function getStaticProps() {
   const client = new CanvasClient({
     apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
+    apiHost: process.env.UNIFORM_API_HOST,
   });
 
   const { composition } = await client.getCompositionBySlug({
-    slug: "/landing",
+    slug: "/",
   });
 
   await enhance({

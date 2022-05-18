@@ -12,8 +12,10 @@
     "@uniformdev/canvas": "^16.0.0",
     "@uniformdev/canvas-bigcommerce": "^16.0.0",
     "@uniformdev/canvas-contentful": "^16.0.0",
+    "@uniformdev/canvas-contentstack": "^16.0.0",
     "@uniformdev/canvas-react": "^16.0.0",
     "@uniformdev/cli": "^16.0.0",
+    "contentstack": "^3.15.1",
     "next": "12.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2"
