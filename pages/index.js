@@ -4,6 +4,8 @@ import { CanvasClient, enhance } from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
 import { enhancers } from "../enhancers";
 import { resolveRenderer } from "../components/ResolveRenderer";
+import GlobalHeader from "../components/GlobalHeader";
+import GlobalFooter from "../components/GlobalFooter";
 
 export default function IndexPage({ composition }) {
   return (
@@ -13,8 +15,16 @@ export default function IndexPage({ composition }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Composition data={composition} resolveRenderer={resolveRenderer}>
-        <Slot name="main" />
+      <Composition
+        data={composition}
+        resolveRenderer={resolveRenderer}
+        behaviorTracking="onLoad"
+      >
+        <GlobalHeader />
+        <main className="mx-auto" style={{ maxWidth: "1440px" }}>
+          <Slot name="main" />
+        </main>
+        <GlobalFooter />
       </Composition>
     </div>
   );

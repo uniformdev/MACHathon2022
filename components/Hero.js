@@ -1,15 +1,27 @@
 export default function Hero({ component }) {
-  const { chapeau, title, subTitle } = component.parameters.entry.value;
+  const { title, subtitle } = component.parameters.entry.value;
+
+  function addColorToYour(title) {
+    return title.replace("your", '<span class="text-primary">your</span>');
+  }
+
   const { srcset } = component.parameters.cloudinary.value[0];
   return (
-    <section
-      style={{ margin: "0 0 1rem 0", padding: "1rem", background: "#ddd" }}
-    >
-      <h1>
-        {chapeau} {title}
-      </h1>
-      <h2>{subTitle}</h2>
-      <img width={400} srcSet={srcset} alt="" />
+    <section className="aspect-[1440/632] relative">
+      <img
+        width={1440}
+        height={632}
+        srcSet={srcset}
+        alt="rediscover your skin"
+        className="absolute"
+      />
+      <article className="absolute max-w-xl top-56 left-56">
+        <h1
+          className="font-semibold text-8xl mb-8"
+          dangerouslySetInnerHTML={{ __html: addColorToYour(title) }}
+        />
+        <p className="text-xl">{subtitle}</p>
+      </article>
     </section>
   );
 }
