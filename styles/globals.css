@@ -4,7 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-light text-dark;
+    background: #efefef;
+    @apply text-dark;
   }
 
   img,
