@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Parallax } from "react-scroll-parallax";
 
 export default function ProductHighlight({ component }) {
   const { name, description } = component.parameters.entry.value;
@@ -15,7 +16,8 @@ export default function ProductHighlight({ component }) {
         alt="rediscover your skin"
         className="absolute"
       />
-      <article
+      <Parallax
+        speed={10}
         className={`max-w-2xl absolute top-56 ${
           variant === "imageLeft" ? "right-44" : "left-44"
         }`}
@@ -43,7 +45,7 @@ export default function ProductHighlight({ component }) {
         <Link href={url.value}>
           <a className="inline-block cta ml-8">{ctaText.value}</a>
         </Link>
-      </article>
+      </Parallax>
     </section>
   );
 }

@@ -1,3 +1,5 @@
+import { Parallax } from "react-scroll-parallax";
+
 export default function Routine({ component }) {
   const { srcset } = component.parameters.cloudinary.value[0];
   const url = component.parameters.url.value;
@@ -13,7 +15,10 @@ export default function Routine({ component }) {
         alt={title}
       />
 
-      <article className="bg-tertiary p-8 max-w-2xl absolute top-32 right-32">
+      <Parallax
+        speed={5}
+        className="bg-tertiary p-8 max-w-2xl absolute top-32 right-32"
+      >
         <h2 className="mb-8">
           <span className="block text-primary font-semibold text-6xl">
             {chapeau}
@@ -27,7 +32,7 @@ export default function Routine({ component }) {
         <a href="#" className="inline-block cta ml-8">
           {cta}
         </a>
-      </article>
+      </Parallax>
     </section>
   );
 }

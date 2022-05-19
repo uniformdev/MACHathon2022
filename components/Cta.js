@@ -5,7 +5,7 @@ export default function Cta({ component }) {
   const { chapeau, copy, cta_text, title } = component.parameters.entry.value;
 
   return (
-    <section className="w-full mb-12 bg-tertiary p-8">
+    <div className="w-full mb-12 bg-tertiary p-8">
       <h3 className="mb-8">
         <span className="block text-primary font-semibold text-6xl">
           {chapeau}
@@ -19,6 +19,6 @@ export default function Cta({ component }) {
       <Link href={url.value}>
         <a className="inline-block cta ml-8">{cta_text}</a>
       </Link>
-    </section>
+    </div>
   );
 }
