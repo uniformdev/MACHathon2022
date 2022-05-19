@@ -56,7 +56,7 @@ function createSrcSet(
 
   widths.split(",").forEach((width) => {
     let transforms = `${
-      transformation ? transformation : baseOptions
+      transformation ? transformation : baseOptions || "q_auto,f_auto"
     },w_${width}`;
 
     if (ratio) {
@@ -100,14 +100,21 @@ export const cloudinaryEnhancer = ({ parameter }) => {
 };
 
 export const bigCommerceModelCleaner = ({ parameter }) => {
-  const { id, name, price, images, meta_description } = parameter.value;
+  const { id, name, price, images, description, custom_fields } =
+    parameter.value;
 
   parameter.value = {
     id,
     name,
-    description: meta_description,
+    description:
+      custom_fields.filter((field) => field.name === "ShortDescription")[0]
+        .value || "",
+    product_description: description,
     price,
-    images: images.reverse().map((image) => {
+    ingredients:
+      custom_fields.filter((field) => field.name === "Ingredients")[0].value ||
+      "",
+    images: images?.reverse().map((image) => {
       return `https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/${image.url_zoom}`;
     }),
   };
@@ -125,24 +132,14 @@ export const bigCommerceEnhancer = () =>
     client: bigCommerceClient,
     createProductOptions: () => {
       return {
-        include_fields: [
-          "id",
-          "name",
-          "price",
-          "description",
-          "meta_description",
-        ],
+        include: ["images", "custom_fields"],
+        include_fields: ["id", "name", "price", "description"],
       };
     },
     createProductQueryOptions: () => {
       return {
-        include_fields: [
-          "id",
-          "name",
-          "price",
-          "description",
-          "meta_description",
-        ],
+        include: ["images", "custom_fields"],
+        include_fields: ["id", "name", "price", "description"],
       };
     },
   });

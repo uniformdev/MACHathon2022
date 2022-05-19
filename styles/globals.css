@@ -21,4 +21,8 @@
   .cta:hover {
     @apply bg-tertiary text-primary
   }
+
+  .product-detail article p {
+    @apply mb-4
+  }
 }

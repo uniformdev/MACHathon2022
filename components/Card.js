@@ -14,11 +14,11 @@ const Card = ({ product }) => {
             className="absolute w-100 h-auto"
           />
 
-          <button className="cta absolute top-4 left-4">
+          <button className="cta absolute bottom-4 right-4">
             {product.ctaText}
           </button>
 
-          <Parallax speed={5} className="absolute -bottom-6 left-8">
+          <Parallax speed={3} className="absolute -bottom-6 left-8">
             <h3>
               <span className="block text-primary font-semibold text-6xl">
                 your
