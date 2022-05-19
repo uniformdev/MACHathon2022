@@ -7,6 +7,7 @@ import Editorial from "./Editorial";
 import Cta from "./Cta";
 import ProductCard from "./ProductCard";
 import ProductDetail from "./ProductDetail";
+import Tutorial from "./Tutorial";
 
 const mappings = {
   hero: Hero,
@@ -16,6 +17,7 @@ const mappings = {
   cta: Cta,
   productCard: ProductCard,
   productDetail: ProductDetail,
+  tutorial: Tutorial,
 };
 
 export function resolveRenderer(component) {
