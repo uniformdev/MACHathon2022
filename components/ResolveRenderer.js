@@ -8,6 +8,7 @@ import Cta from "./Cta";
 import ProductCard from "./ProductCard";
 import ProductDetail from "./ProductDetail";
 import Tutorial from "./Tutorial";
+import ProductList from "./ProductList";
 
 const mappings = {
   hero: Hero,
@@ -18,6 +19,7 @@ const mappings = {
   productCard: ProductCard,
   productDetail: ProductDetail,
   tutorial: Tutorial,
+  productList: ProductList,
 };
 
 export function resolveRenderer(component) {

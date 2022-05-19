@@ -100,20 +100,19 @@ export const cloudinaryEnhancer = ({ parameter }) => {
 };
 
 export const bigCommerceModelCleaner = ({ parameter }) => {
-  const { id, name, price, images, description, custom_fields } =
-    parameter.value;
+  const { name, price, images, description, custom_fields } = parameter.value;
 
   parameter.value = {
-    id,
     name,
-    description:
-      custom_fields.filter((field) => field.name === "ShortDescription")[0]
-        .value || "",
+    description: custom_fields
+      ? custom_fields.filter((field) => field.name === "ShortDescription")[0]
+          .value
+      : "",
     product_description: description,
     price,
-    ingredients:
-      custom_fields.filter((field) => field.name === "Ingredients")[0].value ||
-      "",
+    ingredients: custom_fields
+      ? custom_fields.filter((field) => field.name === "Ingredients")[0].value
+      : "",
     images: images?.reverse().map((image) => {
       return `https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/${image.url_zoom}`;
     }),
