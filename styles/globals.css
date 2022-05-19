@@ -13,4 +13,12 @@
     width: 100%;
     height: auto;
   }
+
+  .cta {
+    @apply uppercase font-semibold px-4 py-3 bg-primary text-light border border-primary
+  }
+
+  .cta:hover {
+    @apply bg-tertiary text-primary
+  }
 }

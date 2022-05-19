@@ -100,14 +100,14 @@ export const cloudinaryEnhancer = ({ parameter }) => {
 };
 
 export const bigCommerceModelCleaner = ({ parameter }) => {
-  const { id, name, description, price, images } = parameter.value;
+  const { id, name, price, images, meta_description } = parameter.value;
 
   parameter.value = {
     id,
     name,
-    description,
+    description: meta_description,
     price,
-    images: images.map((image) => {
+    images: images.reverse().map((image) => {
       return `https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/${image.url_zoom}`;
     }),
   };
@@ -125,12 +125,24 @@ export const bigCommerceEnhancer = () =>
     client: bigCommerceClient,
     createProductOptions: () => {
       return {
-        include_fields: ["id", "name", "price", "description"],
+        include_fields: [
+          "id",
+          "name",
+          "price",
+          "description",
+          "meta_description",
+        ],
       };
     },
     createProductQueryOptions: () => {
       return {
-        include_fields: ["id", "name", "price", "description"],
+        include_fields: [
+          "id",
+          "name",
+          "price",
+          "description",
+          "meta_description",
+        ],
       };
     },
   });

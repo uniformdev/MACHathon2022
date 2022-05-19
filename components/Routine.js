@@ -1,4 +1,4 @@
-export default function Hero({ component }) {
+export default function Routine({ component }) {
   const { srcset } = component.parameters.cloudinary.value[0];
   const url = component.parameters.url.value;
   const { chapeau, copy, cta, title } = component.parameters.entry.value;
@@ -24,10 +24,7 @@ export default function Hero({ component }) {
         </h2>
 
         <p className="text-xl ml-8 mb-8">{copy}</p>
-        <a
-          href="#"
-          className="inline-block uppercase font-semibold px-4 py-3 bg-primary text-light ml-8"
-        >
+        <a href="#" className="inline-block cta ml-8">
           {cta}
         </a>
       </article>

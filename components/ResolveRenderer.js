@@ -2,10 +2,18 @@ import { DefaultNotImplementedComponent } from "@uniformdev/canvas-react";
 
 import Hero from "./Hero";
 import Routine from "./Routine";
+import ProductHighlight from "./ProductHighlight";
+import Editorial from "./Editorial";
+import Cta from "./Cta";
+import ProductCard from "./ProductCard";
 
 const mappings = {
   hero: Hero,
   routine: Routine,
+  productHighlight: ProductHighlight,
+  editorial: Editorial,
+  cta: Cta,
+  productCard: ProductCard,
 };
 
 export function resolveRenderer(component) {
