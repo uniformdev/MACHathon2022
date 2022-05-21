@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pull:components": "uniform presentation component pull ./data/definitions",
+    "pull:compositions": "uniform presentation composition pull ./data/compositions",
+    "push:components": "uniform presentation component push ./data/definitions",
+    "push:compositions": "uniform presentation composition push ./data/compositions",
+    "push:compositions:published": "uniform presentation composition push ./data/compositions --state published"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",

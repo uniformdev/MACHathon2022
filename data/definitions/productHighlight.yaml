@@ -1,0 +1,48 @@
+id: productHighlight
+name: Product highlight
+permissions: []
+icon: carousel
+parameters:
+  - id: entry
+    name: entry
+    type: bigcommerceProduct
+    helpText: Select a BigCommerce product
+    typeConfig: null
+  - id: ctaText
+    name: cta text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: url
+    name: url
+    type: text
+    helpText: URL to PDP page starting with /
+    typeConfig: null
+  - id: cloudinary
+    name: cloudinary
+    type: cloudinary-parameter
+    helpText: ''
+    typeConfig:
+      ratio: '1440:722'
+      widths: 1280,1440,1600
+      defaultoptions: q_auto,f_auto
+  - id: theme
+    name: theme
+    type: select
+    helpText: Light or dark theme for the copy
+    typeConfig:
+      options:
+        - text: light
+          value: light
+        - text: dark
+          value: dark
+      required: true
+useTeamPermissions: true
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-05-18T11:25:37.895923+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'
+variants:
+  - id: imageLeft
+    name: image left

@@ -1,0 +1,26 @@
+id: productList
+name: Product list
+permissions: []
+icon: dice-4
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: product1
+    name: product1
+    allowedComponents:
+      - productCard
+    inheritAllowedComponents: false
+  - id: product2
+    name: product2
+    allowedComponents:
+      - productCard
+    inheritAllowedComponents: false
+titleParameter: ''
+canBeComposition: false
+created: '2022-05-18T12:26:26.476316+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

@@ -1,0 +1,134 @@
+id: tutorial
+name: Tutorial
+permissions: []
+icon: screen
+parameters:
+  - id: cloudinary
+    name: Cloudinary
+    type: cloudinary-parameter
+    helpText: ''
+    typeConfig:
+      ratio: '1440:978'
+      widths: 400,900,1280
+      defaultoptions: q_auto,f_auto
+  - id: entry
+    name: entry
+    type: contentstackEntrySelector
+    helpText: ''
+    typeConfig:
+      allowedContentTypes:
+        tutorial:
+          uid: tutorial
+          title: Tutorial
+          schema:
+            - uid: title
+              unique: true
+              multiple: false
+              data_type: text
+              mandatory: true
+              display_name: Title
+              field_metadata:
+                version: 3
+                _default: true
+              non_localizable: false
+            - uid: steps
+              schema:
+                - uid: step
+                  format: ''
+                  unique: false
+                  multiple: false
+                  data_type: text
+                  mandatory: false
+                  display_name: step
+                  error_messages:
+                    format: ''
+                  field_metadata:
+                    version: 3
+                    multiline: true
+                    description: ''
+                    default_value: ''
+                  non_localizable: false
+              unique: false
+              multiple: true
+              data_type: group
+              mandatory: false
+              display_name: Steps
+              field_metadata:
+                description: ''
+                instruction: ''
+              non_localizable: false
+          SYS_ACL:
+            roles:
+              - uid: blt394c785463ca1011
+                read: true
+                delete: true
+                update: true
+                sub_acl:
+                  read: true
+                  create: true
+                  delete: true
+                  update: true
+                  publish: true
+              - uid: blt1dff7dd568a00a2b
+                read: true
+                sub_acl:
+                  read: true
+                  create: true
+                  delete: true
+                  update: true
+                  publish: true
+              - uid: blt8373f77e84049594
+                read: true
+                delete: true
+                update: true
+                sub_acl:
+                  read: true
+                  create: true
+                  delete: true
+                  update: true
+                  publish: true
+            others:
+              read: false
+              create: false
+              delete: false
+              update: false
+              sub_acl:
+                read: false
+                create: false
+                delete: false
+                update: false
+                publish: false
+          options:
+            title: title
+            is_page: false
+            singleton: false
+            sub_title: []
+          _version: 2
+          abilities:
+            create_object: true
+            delete_object: true
+            update_object: true
+            get_one_object: true
+            get_all_objects: true
+            delete_all_objects: true
+          created_at: '2022-05-19T12:24:29.471Z'
+          updated_at: '2022-05-19T12:26:22.820Z'
+          DEFAULT_ACL:
+            users:
+              - uid: bltc3f01e41bd08ef3f
+                read: true
+                sub_acl:
+                  read: true
+            others:
+              read: false
+              create: false
+          description: 'How to apply tutorial '
+          inbuilt_class: false
+          last_activity: {}
+          maintain_revisions: true
+useTeamPermissions: true
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-05-19T12:29:22.835428+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

@@ -1,0 +1,233 @@
+composition:
+  _id: 366f2806-fc3f-410f-b2e8-aa265ade9e4d
+  type: home
+  _name: Home Page
+  _slug: /
+  slots:
+    main:
+      - type: hero
+        parameters:
+          entry:
+            type: contentstackEntrySelector
+            value:
+              entryUid: blt7072def549ed2747
+              contentTypeUid: hero
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652873671/machathon2022/hero-image.jpg
+                ratio: '1440:632'
+                width: 2880
+                format: jpg
+                height: 1264
+                widths: 1000,1280,1440
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652873671
+                publicId: machathon2022/hero-image
+                createdAt: '2022-05-18T11:34:31Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/hero-image.jpg
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+      - type: routine
+        parameters:
+          url:
+            type: text
+            value: /pdp/face-serum
+          entry:
+            type: contentstackEntrySelector
+            value:
+              entryUid: blt74ff17c38c9f8079
+              contentTypeUid: routine
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652732276/machathon2022/3.png
+                ratio: '805:535'
+                width: 5810
+                format: png
+                height: 3863
+                widths: 400,900,1280
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652732276
+                publicId: machathon2022/3
+                createdAt: '2022-05-16T20:17:56Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/3.png
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+      - type: productHighlight
+        variant: imageLeft
+        parameters:
+          url:
+            type: text
+            value: /pdp/face-serum
+          entry:
+            type: bigcommerceProduct
+            value: '112'
+          theme:
+            type: select
+            value: light
+          ctaText:
+            type: text
+            value: shop this product
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652873713/machathon2022/img.jpg
+                ratio: '1440:722'
+                width: 2880
+                format: jpg
+                height: 1446
+                widths: 1280,1440,1600
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652873713
+                publicId: machathon2022/img
+                createdAt: '2022-05-18T11:35:13Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/img.jpg
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+      - type: editorial
+        slots:
+          callsToAction:
+            - type: cta
+              parameters:
+                url:
+                  type: text
+                  value: /pdp/face-serum
+                entry:
+                  type: contentstackEntrySelector
+                  value:
+                    entryUid: blta560df66e81e0389
+                    contentTypeUid: cta
+            - type: productCard
+              parameters:
+                url:
+                  type: text
+                  value: /pdp/face-cream
+                entry:
+                  type: bigcommerceProduct
+                  value: '120'
+                ctaText:
+                  type: text
+                  value: buy now
+        parameters:
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652732248/machathon2022/5.png
+                ratio: '625:1013'
+                width: 4000
+                format: png
+                height: 6016
+                widths: 600,700,800,900
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652732248
+                publicId: machathon2022/5
+                createdAt: '2022-05-16T20:17:28Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/5.png
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+      - type: productHighlight
+        parameters:
+          url:
+            type: text
+            value: /pdp/eye-contour
+          entry:
+            type: bigcommerceProduct
+            value: '121'
+          theme:
+            type: select
+            value: dark
+          ctaText:
+            type: text
+            value: shop this product
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652990906/machathon2022/Group_1_1.jpg
+                ratio: '1440:722'
+                width: 2880
+                format: jpg
+                height: 1446
+                widths: 1280,1440,1600
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652990906
+                publicId: machathon2022/Group_1_1
+                createdAt: '2022-05-19T20:08:26Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/Group_1_1.jpg
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+      - type: editorial
+        slots:
+          callsToAction:
+            - type: cta
+              parameters:
+                url:
+                  type: text
+                  value: /
+                entry:
+                  type: contentstackEntrySelector
+                  value:
+                    entryUid: blte5ac003254db455b
+                    contentTypeUid: cta
+            - type: productCard
+              parameters:
+                url:
+                  type: text
+                  value: /pdp/bundle
+                entry:
+                  type: bigcommerceProduct
+                  value: '122'
+                ctaText:
+                  type: text
+                  value: GET NOW
+        parameters:
+          cloudinary:
+            type: cloudinary-parameter
+            value:
+              - alt: ''
+                url: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/v1652988739/machathon2022/204866152_599556441010986_890843646729057685_n.jpg
+                ratio: '625:1013'
+                width: 1080
+                format: jpg
+                height: 1080
+                widths: 600,700,800,900
+                caption: ''
+                options: q_auto,f_auto
+                version: 1652988739
+                publicId: machathon2022/204866152_599556441010986_890843646729057685_n
+                createdAt: '2022-05-19T19:32:19Z'
+                previewUrl: >-
+                  https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/204866152_599556441010986_890843646729057685_n.jpg
+                resourceType: image
+                transformation: ''
+                globalImageOptions: q_auto,f_auto
+  parameters: {}
+created: '2022-05-18T12:26:46.976453+00:00'
+modified: '2022-05-19T20:33:52.018811+00:00'
+pattern: false

@@ -1,0 +1,22 @@
+id: productDetail
+name: Product Detail
+permissions: []
+icon: assign
+parameters:
+  - id: entry
+    name: entry
+    type: bigcommerceProduct
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: ctaText
+    name: CTA text
+    type: text
+    helpText: Add to cart
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: ''
+canBeComposition: false
+created: '2022-05-19T12:16:50.80928+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

@@ -1,0 +1,24 @@
+id: pdp
+name: PDP
+permissions: []
+icon: dollar
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: main
+    name: main
+    allowedComponents:
+      - productDetail
+      - tutorial
+      - routine
+      - productList
+    inheritAllowedComponents: false
+slugSettings:
+  unique: global
+  required: 'yes'
+  regularExpression: ^\/.*$
+  regularExpressionMessage: must begin with slash
+titleParameter: ''
+canBeComposition: true
+created: '2022-05-19T12:09:43.937883+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

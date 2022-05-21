@@ -1,0 +1,26 @@
+id: productCard
+name: Product Card
+permissions: []
+icon: shopping-cart
+parameters:
+  - id: entry
+    name: entry
+    type: bigcommerceProduct
+    helpText: ''
+    typeConfig: null
+  - id: ctaText
+    name: cta text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: url
+    name: url
+    type: text
+    helpText: A slug to a page beginning with /
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: url
+canBeComposition: false
+created: '2022-05-18T12:20:38.46762+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

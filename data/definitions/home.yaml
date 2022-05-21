@@ -1,0 +1,28 @@
+id: home
+name: Home
+permissions: []
+icon: screen
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: main
+    name: main
+    allowedComponents:
+      - hero
+      - routine
+      - productHighlight
+      - cta
+      - productCard
+      - editorial
+      - productList
+      - tutorial
+    inheritAllowedComponents: false
+slugSettings:
+  unique: global
+  required: 'yes'
+  regularExpression: ^\/.*$
+  regularExpressionMessage: must begin with slash
+titleParameter: ''
+canBeComposition: true
+created: '2022-05-18T10:39:21.281295+00:00'
+updated: '2022-05-20T14:50:51.657873+00:00'

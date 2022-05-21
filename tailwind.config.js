@@ -9,14 +9,14 @@ module.exports = {
   ],
   theme: {
     colors: {
-      light: "#ffffff",
-      dark: "#333333",
-      primary: "#693A25",
-      secondary: "#AE9A91",
-      tertiary: "#EEE0DB",
+      light: process.env.THEME_COLOR_LIGHT,
+      dark: process.env.THEME_COLOR_DARK,
+      primary: process.env.THEME_COLOR_PRIMARY,
+      secondary: process.env.THEME_COLOR_SECONDAIRY,
+      tertiary: process.env.THEME_COLOR_TERTIARY,
     },
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
+      sans: [process.env.THEME_FONT_FAMILY_NAME, "sans-serif"],
     },
   },
 };
