@@ -100,9 +100,11 @@ export const cloudinaryEnhancer = ({ parameter }) => {
 };
 
 export const bigCommerceModelCleaner = ({ parameter }) => {
-  const { name, price, images, description, custom_fields } = parameter.value;
+  const { id, name, price, images, description, custom_fields } =
+    parameter.value;
 
   parameter.value = {
+    id,
     name,
     description: custom_fields
       ? custom_fields.filter((field) => field.name === "ShortDescription")[0]
