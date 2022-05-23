@@ -2,7 +2,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export default function ProductDetail({ component }) {
   const { ctaText } = component.parameters;
-  const { name, product_description, price, ingredients, images } =
+  const { id, name, product_description, price, ingredients, images } =
     component.parameters.entry.value;
 
   return (
@@ -40,7 +40,9 @@ export default function ProductDetail({ component }) {
         </Parallax>
         <Parallax speed={3} className="bg-tertiary p-8 -mt-12 w-2/4">
           <p className="text-5xl font-semibold mb-4">&euro;{price}</p>
-          <button className="cta">{ctaText.value}</button>
+          <a href={`/api/addtocart?productId=${id}`} className="cta">
+            {ctaText.value}
+          </a>
         </Parallax>
       </div>
       <div className="grid grid-cols-2 gap-8 mx-16">
