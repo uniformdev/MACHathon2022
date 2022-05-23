@@ -12,17 +12,17 @@ const GlobalHeader = () => {
         </Link>
 
         <nav className="mt-6 mr-8 text-xl space-x-6 hidden sm:block">
-          <Link href="/">
-            <a className="text-light">serum</a>
+          <Link href="/pdp/face-serum">
+            <a className="text-light">face serum</a>
           </Link>
-          <Link href="/">
-            <a className="text-light">cream</a>
+          <Link href="/pdp/face-cream">
+            <a className="text-light">face cream</a>
           </Link>
-          <Link href="/">
+          <Link href="/pdp/eye-contour">
             <a className="text-light">eye contour</a>
           </Link>
-          <Link href="/">
-            <a className="text-light">about us</a>
+          <Link href="/pdp/bundle">
+            <a className="text-light">skncre bundle</a>
           </Link>
         </nav>
       </div>

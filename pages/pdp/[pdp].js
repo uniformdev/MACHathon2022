@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { CanvasClient, enhance } from "@uniformdev/canvas";
+import { CanvasClient, enhance, CANVAS_DRAFT_STATE } from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
 import { enhancers } from "../../enhancers";
 import { resolveRenderer } from "../../components/ResolveRenderer";
@@ -11,7 +11,7 @@ export default function PdpPage({ composition }) {
   return (
     <div>
       <Head>
-        <title>skncre - MACHathon2022</title>
+        <title>skncre - MACHathon 2022</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -31,7 +31,8 @@ export default function PdpPage({ composition }) {
 }
 
 export async function getStaticProps(context) {
-  const slug = context?.params?.pdp;
+  const pdp = context?.params?.pdp;
+  const slug = `/pdp/${pdp}`;
 
   const client = new CanvasClient({
     apiKey: process.env.UNIFORM_API_KEY,
@@ -39,15 +40,27 @@ export async function getStaticProps(context) {
     apiHost: process.env.UNIFORM_API_HOST,
   });
 
-  const { composition } = await client.getCompositionBySlug({
-    slug: `/pdp/${slug}`,
-  });
+  let composition;
 
-  await enhance({
-    composition,
-    enhancers,
-    context: {},
-  });
+  if (slug === "/pdp/bundle") {
+    const data = await fetch(
+      "http://localhost:3000/api/product?slug=/pdp/bundle"
+    );
+    composition = await data.json();
+  } else {
+    const data = await client.getCompositionBySlug({
+      slug,
+      state: CANVAS_DRAFT_STATE,
+    });
+
+    composition = data.composition;
+
+    await enhance({
+      composition,
+      enhancers,
+      context: {},
+    });
+  }
 
   return {
     props: {
@@ -58,7 +71,12 @@ export async function getStaticProps(context) {
 
 export const getStaticPaths = () => {
   return {
-    paths: ["/pdp/face-serum", "/pdp/face-cream", "/pdp/eye-contour"],
+    paths: [
+      "/pdp/face-serum",
+      "/pdp/face-cream",
+      "/pdp/eye-contour",
+      "/pdp/bundle",
+    ],
     fallback: false,
   };
 };

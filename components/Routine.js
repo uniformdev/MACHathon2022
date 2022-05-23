@@ -29,7 +29,7 @@ export default function Routine({ component }) {
         </h2>
 
         <p className="text-xl ml-8 mb-8">{copy}</p>
-        <a href="#" className="inline-block cta ml-8">
+        <a href={url} className="inline-block cta ml-8">
           {cta}
         </a>
       </Parallax>

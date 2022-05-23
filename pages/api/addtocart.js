@@ -32,6 +32,8 @@ export default async function handler(req, res) {
 
   const result = await response.json();
 
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
   res.writeHead(302, {
     Location: result.data.redirect_urls.checkout_url,
   });

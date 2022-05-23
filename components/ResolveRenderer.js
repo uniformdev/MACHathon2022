@@ -10,6 +10,10 @@ import ProductDetail from "./ProductDetail";
 import Tutorial from "./Tutorial";
 import ProductList from "./ProductList";
 
+import DynamicProductDetail from "./dynamicpdp/dynamicProductDetail";
+import DynamicTutorial from "./dynamicpdp/dynamicTutorial";
+import DynamicRoutine from "./dynamicpdp/dynamicRoutine";
+
 const mappings = {
   hero: Hero,
   routine: Routine,
@@ -20,6 +24,9 @@ const mappings = {
   productDetail: ProductDetail,
   tutorial: Tutorial,
   productList: ProductList,
+  dynamicProductDetail: DynamicProductDetail,
+  dynamicTutorial: DynamicTutorial,
+  dynamicRoutine: DynamicRoutine,
 };
 
 export function resolveRenderer(component) {

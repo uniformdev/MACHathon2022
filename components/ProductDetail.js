@@ -4,7 +4,6 @@ export default function ProductDetail({ component }) {
   const { ctaText } = component.parameters;
   const { id, name, product_description, price, ingredients, images } =
     component.parameters.entry.value;
-
   return (
     <section className="bg-light product-detail pb-12">
       <div className="grid grid-cols-2">
@@ -41,7 +40,7 @@ export default function ProductDetail({ component }) {
         <Parallax speed={3} className="bg-tertiary p-8 -mt-12 w-2/4">
           <p className="text-5xl font-semibold mb-4">&euro;{price}</p>
           <a href={`/api/addtocart?productId=${id}`} className="cta">
-            {ctaText.value}
+            {ctaText?.value || "add to cart"}
           </a>
         </Parallax>
       </div>
@@ -51,8 +50,12 @@ export default function ProductDetail({ component }) {
           <article dangerouslySetInnerHTML={{ __html: product_description }} />
         </div>
         <div className="pl-2">
-          <h3 className="text-3xl font-semibold mb-4">ingredients</h3>
-          <article dangerouslySetInnerHTML={{ __html: ingredients }} />
+          {ingredients ? (
+            <>
+              <h3 className="text-3xl font-semibold mb-4">ingredients</h3>
+              <article dangerouslySetInnerHTML={{ __html: ingredients }} />
+            </>
+          ) : null}
         </div>
       </div>
     </section>
