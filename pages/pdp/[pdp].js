@@ -77,6 +77,6 @@ export const getStaticPaths = () => {
       "/pdp/eye-contour",
       "/pdp/bundle",
     ],
-    fallback: false,
+    fallback: true,
   };
 };
