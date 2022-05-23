@@ -1,0 +1,196 @@
+{
+  "_id": "ad60054b-99ef-4b9c-b503-05c03cf1b913",
+  "type": "pdp",
+  "_name": "Face Serum",
+  "_slug": "/pdp/face-serum",
+  "slots": {
+    "main": [
+      {
+        "type": "productDetail",
+        "parameters": {
+          "entry": {
+            "type": "bigcommerceProduct",
+            "value": {
+              "id": 112,
+              "name": "face serum",
+              "description": "this calming serum revitalizes the skin like never before.",
+              "product_description": "<p>Indicated for the treatment of wrinkles in the periocular area and blemish of the bags; based on snail slime, hyaluronic acid, pre and probiotics.</p>\n<p>Snail slime: Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as: proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; preventing the formation of skin spots and the accumulation of impurities.</p>",
+              "price": 399,
+              "ingredients": "snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine, snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine.",
+              "images": [
+                "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/112/images/376/p3__20436.1652881692.1280.1280.jpg?c=1",
+                "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/112/images/380/10__65154.1652970386.1280.1280.png?c=1",
+                "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/112/images/379/7__59602.1652970386.1280.1280.png?c=1",
+                "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/112/images/378/05-2__32005.1652970386.1280.1280.jpg?c=1",
+                "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/112/images/377/06-2__37160.1652970386.1280.1280.jpg?c=1"
+              ]
+            }
+          },
+          "ctaText": {
+            "type": "text",
+            "value": "add to cart"
+          }
+        }
+      },
+      {
+        "type": "tutorial",
+        "parameters": {
+          "entry": {
+            "type": "contentstackEntrySelector",
+            "value": {
+              "uid": "blt769fec8163004566",
+              "steps": [
+                {
+                  "step": "apply a little of the product to your index finger.",
+                  "_metadata": {
+                    "uid": "cs33167ad5ad5b195b"
+                  }
+                },
+                {
+                  "step": "apply small amounts to the lower part of the eye.",
+                  "_metadata": {
+                    "uid": "csd965cf30ec4b9159"
+                  }
+                },
+                {
+                  "step": "spread the product from the tear duct to the outside following the eye contour.",
+                  "_metadata": {
+                    "uid": "cs92c0dde32c332e03"
+                  }
+                },
+                {
+                  "step": "to eliminate small wrinkles, work from the outside of the eye to the tear duct.",
+                  "_metadata": {
+                    "uid": "cs5f5063007f724f2c"
+                  }
+                }
+              ],
+              "title": "How to Apply"
+            }
+          },
+          "cloudinary": {
+            "type": "cloudinary-parameter",
+            "value": [
+              {
+                "width": 2880,
+                "height": 1264,
+                "alt": "",
+                "caption": "",
+                "srcset": "https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_400/machathon2022/hero-image.jpg 400w,https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_900/machathon2022/hero-image.jpg 900w,https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_1440:978,c_fill,w_1280/machathon2022/hero-image.jpg 1280w"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "routine",
+        "variant": "imageRight",
+        "parameters": {
+          "url": {
+            "type": "text",
+            "value": "/range"
+          },
+          "entry": {
+            "type": "contentstackEntrySelector",
+            "value": {
+              "uid": "blt983998acc99d8d17",
+              "chapeau": "your",
+              "copy": "explore the full range containing face cream, serum and eye contour.",
+              "cta": "shop the full range",
+              "title": "beauty range"
+            }
+          },
+          "cloudinary": {
+            "type": "cloudinary-parameter",
+            "value": [
+              {
+                "width": 6016,
+                "height": 4000,
+                "alt": "",
+                "caption": "",
+                "srcset": "https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_400/machathon2022/2.png 400w,https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_900/machathon2022/2.png 900w,https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto,f_auto,ar_805:535,c_fill,w_1280/machathon2022/2.png 1280w"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "productList",
+        "slots": {
+          "product1": [
+            {
+              "type": "productCard",
+              "parameters": {
+                "url": {
+                  "type": "text",
+                  "value": "/pdp/face-cream"
+                },
+                "entry": {
+                  "type": "bigcommerceProduct",
+                  "value": {
+                    "id": 120,
+                    "name": "face cream",
+                    "description": "Face Cream Snail Slime and Pure Hyaluronic Acid",
+                    "product_description": "<p>Light and evanescent texture, with a fresh and pleasant touch. The basic formula of two main ingredients known for a long time for their functional properties: Pure Helicine and Hyaluronic Acid. Suitable for all skin types: dry, combination, and oily.</p>\n<p>Snail slime: Nourishing, regenerating, and antioxidant properties. It also has film-forming properties such as proteins, mucopolysaccharides, allantoin, and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky. Prevents the formation of skin spots (light and dark), pimples, stretch marks, and scars, and prevents the accumulation of blemishes.</p>",
+                    "price": 355,
+                    "ingredients": "aqua, glycerin, butylene glycol, hydrogenated coco-glycerides, glyceryl stearate se, caprylic/capric triglyceride, dicaprylyl ether, phenyl trimethicone",
+                    "images": [
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/120/images/418/p2__90864.1652989928.1280.1280.jpg?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/120/images/419/05__40177.1652989928.1280.1280.jpg?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/120/images/417/6__89535.1652989928.1280.1280.png?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/120/images/416/8__87781.1652989928.1280.1280.png?c=1"
+                    ]
+                  }
+                },
+                "ctaText": {
+                  "type": "text",
+                  "value": "buy now"
+                }
+              }
+            }
+          ],
+          "product2": [
+            {
+              "type": "productCard",
+              "parameters": {
+                "url": {
+                  "type": "text",
+                  "value": "/pdp/eye-contour"
+                },
+                "entry": {
+                  "type": "bigcommerceProduct",
+                  "value": {
+                    "id": 121,
+                    "name": "eye contour",
+                    "description": "say goodbye to bags, blemish and wrinkles in the periocular area.",
+                    "product_description": "<p>Indicated for the treatment of wrinkles in the periocular area and blemish of the bags; based on snail slime, hyaluronic acid, pre and probiotics.</p>\n<p>Snail slime: Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as: proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; preventing the formation of skin spots and the accumulation of impurities.</p>",
+                    "price": 405,
+                    "ingredients": "aqua, propylene glycole, isopropyl myristate, snail secretion filtrate, hyaluronic acid, acetyl hexapeptide-8, acetyl heptapeptide-4, polymnia sonchifolia root juice",
+                    "images": [
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/121/images/423/p1__75857.1652990430.1280.1280.jpg?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/121/images/424/11__35826.1652990476.1280.1280.png?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/121/images/422/1__10394.1652990430.1280.1280.png?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/121/images/421/124417779_206678364160122_796210822985302467_n__32209.1652990430.1280.1280.jpg?c=1",
+                      "https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/https://cdn11.bigcommerce.com/s-52xtt66di6/products/121/images/420/4__31875.1652990430.1280.1280.png?c=1"
+                    ]
+                  }
+                },
+                "ctaText": {
+                  "type": "text",
+                  "value": "buy now"
+                }
+              }
+            }
+          ]
+        },
+        "parameters": {
+          "title": {
+            "type": "text",
+            "value": "Related products"
+          }
+        }
+      }
+    ]
+  },
+  "parameters": {}
+}

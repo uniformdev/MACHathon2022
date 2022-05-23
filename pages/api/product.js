@@ -1,4 +1,5 @@
 import contentstack from "contentstack";
+import { uuid } from "uuidv4";
 
 export default async function handler(req, res) {
   const {
@@ -25,6 +26,39 @@ export default async function handler(req, res) {
     ])
     .toJSON()
     .find();
+
+  const result = {
+    _id: uuid(),
+    type: "pdp",
+    _name: "skncre bundle",
+    _slug: "/pdp/bundle",
+    slots: {
+      main: [
+        {
+          type: "productDetail",
+          parameters: {
+            entry: {
+              type: "bigcommerceProduct",
+              value: {},
+            },
+            ctaText: {
+              type: "text",
+              value: "add to cart",
+            },
+          },
+        },
+        {
+          type: "tutorial",
+          parameters: {
+            entry: {
+              type: "contentstackEntrySelector",
+              value: {},
+            },
+          },
+        },
+      ],
+    },
+  };
 
   res.status(200).json({ product });
 }
