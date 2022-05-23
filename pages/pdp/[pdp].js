@@ -58,7 +58,7 @@ export async function getStaticProps(context) {
 
 export const getStaticPaths = () => {
   return {
-    paths: ["/pdp/face-serum"],
+    paths: ["/pdp/face-serum", "/pdp/face-cream", "/pdp/eye-contour"],
     fallback: false,
   };
 };

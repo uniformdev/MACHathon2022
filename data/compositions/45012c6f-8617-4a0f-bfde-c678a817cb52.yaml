@@ -1,15 +1,15 @@
 composition:
-  _id: ad60054b-99ef-4b9c-b503-05c03cf1b913
+  _id: 45012c6f-8617-4a0f-bfde-c678a817cb52
   type: pdp
-  _name: Face Serum
-  _slug: /pdp/face-serum
+  _name: Face Cream
+  _slug: /pdp/face-cream
   slots:
     main:
       - type: productDetail
         parameters:
           entry:
             type: bigcommerceProduct
-            value: '112'
+            value: "120"
           ctaText:
             type: text
             value: add to cart
@@ -23,23 +23,23 @@ composition:
           cloudinary:
             type: cloudinary-parameter
             value:
-              - alt: ''
+              - alt: ""
                 url: >-
                   https://res.cloudinary.com/dwfcofnrd/image/upload/v1652873671/machathon2022/hero-image.jpg
-                ratio: '1440:978'
+                ratio: "1440:978"
                 width: 2880
                 format: jpg
                 height: 1264
                 widths: 400,900,1280
-                caption: ''
+                caption: ""
                 options: q_auto,f_auto
                 version: 1652873671
                 publicId: machathon2022/hero-image
-                createdAt: '2022-05-18T11:34:31Z'
+                createdAt: "2022-05-18T11:34:31Z"
                 previewUrl: >-
                   https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/hero-image.jpg
                 resourceType: image
-                transformation: ''
+                transformation: ""
                 globalImageOptions: q_auto,f_auto
       - type: routine
         variant: imageRight
@@ -55,23 +55,23 @@ composition:
           cloudinary:
             type: cloudinary-parameter
             value:
-              - alt: ''
+              - alt: ""
                 url: >-
                   https://res.cloudinary.com/dwfcofnrd/image/upload/v1652732247/machathon2022/2.png
-                ratio: '805:535'
+                ratio: "805:535"
                 width: 6016
                 format: png
                 height: 4000
                 widths: 400,900,1280
-                caption: ''
+                caption: ""
                 options: q_auto,f_auto
                 version: 1652732247
                 publicId: machathon2022/2
-                createdAt: '2022-05-16T20:17:27Z'
+                createdAt: "2022-05-16T20:17:27Z"
                 previewUrl: >-
                   https://res.cloudinary.com/dwfcofnrd/image/upload/q_auto:low,f_auto,w_150/machathon2022/2.png
                 resourceType: image
-                transformation: ''
+                transformation: ""
                 globalImageOptions: q_auto,f_auto
       - type: productList
         slots:
@@ -80,10 +80,10 @@ composition:
               parameters:
                 url:
                   type: text
-                  value: /pdp/face-cream
+                  value: /pdp/face-serum
                 entry:
                   type: bigcommerceProduct
-                  value: '120'
+                  value: "120"
                 ctaText:
                   type: text
                   value: buy now
@@ -95,7 +95,7 @@ composition:
                   value: /pdp/eye-contour
                 entry:
                   type: bigcommerceProduct
-                  value: '121'
+                  value: "121"
                 ctaText:
                   type: text
                   value: buy now
@@ -104,6 +104,6 @@ composition:
             type: text
             value: Related products
   parameters: {}
-created: '2022-05-19T12:17:07.011023+00:00'
-modified: '2022-05-23T12:04:34.038273+00:00'
+created: "2022-05-23T11:56:28.927559+00:00"
+modified: "2022-05-23T12:03:59.933964+00:00"
 pattern: false

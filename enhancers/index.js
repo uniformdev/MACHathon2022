@@ -114,7 +114,7 @@ export const bigCommerceModelCleaner = ({ parameter }) => {
       ? custom_fields.filter((field) => field.name === "Ingredients")[0].value
       : "",
     images: images?.reverse().map((image) => {
-      return `https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/${image.url_zoom}`;
+      return `https://res.cloudinary.com/dwfcofnrd/image/fetch/c_fill,ar_1:1,q_auto,f_auto/${image.url_zoom}`;
     }),
   };
 
