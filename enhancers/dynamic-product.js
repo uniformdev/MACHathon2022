@@ -4,9 +4,10 @@ import {
   EnhancerBuilder,
   enhance,
   CANVAS_DRAFT_STATE,
+  CANVAS_PUBLISHED_STATE,
 } from "@uniformdev/canvas";
 
-export default async function dynamicProduct(slug) {
+export default async function dynamicProduct(slug, preview) {
   const contentstackClient = contentstack.Stack({
     api_key: process.env.CONTENTSTACK_API_KEY,
     delivery_token: process.env.CONTENTSTACK_DELIVERY_TOKEN,
@@ -76,7 +77,7 @@ export default async function dynamicProduct(slug) {
 
   const { composition } = await canvasClient.getCompositionBySlug({
     slug: "/dynamic-product",
-    state: CANVAS_DRAFT_STATE,
+    state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   });
 
   const enhancers = new EnhancerBuilder()
@@ -99,6 +100,7 @@ export default async function dynamicProduct(slug) {
   await enhance({
     composition,
     enhancers,
+    context: { preview },
   });
 
   return composition;

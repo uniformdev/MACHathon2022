@@ -1,7 +1,12 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-import { CanvasClient, enhance, CANVAS_DRAFT_STATE } from "@uniformdev/canvas";
+import {
+  CanvasClient,
+  enhance,
+  CANVAS_DRAFT_STATE,
+  CANVAS_PUBLISHED_STATE,
+} from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
 import { enhancers } from "../../enhancers";
 import dynamicProduct from "../../enhancers/dynamic-product";
@@ -58,11 +63,11 @@ export async function getStaticProps(context) {
   let composition;
 
   if (slug === "/pdp/bundle") {
-    composition = await dynamicProduct("/pdp/bundle");
+    composition = await dynamicProduct("/pdp/bundle", preview);
   } else {
     const data = await client.getCompositionBySlug({
       slug,
-      state: CANVAS_DRAFT_STATE,
+      state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
     });
 
     composition = data.composition;
@@ -70,7 +75,7 @@ export async function getStaticProps(context) {
     await enhance({
       composition,
       enhancers,
-      context: {},
+      context: { preview },
     });
   }
 

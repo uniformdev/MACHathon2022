@@ -1,7 +1,12 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-import { CanvasClient, enhance } from "@uniformdev/canvas";
+import {
+  CanvasClient,
+  CANVAS_DRAFT_STATE,
+  CANVAS_PUBLISHED_STATE,
+  enhance,
+} from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
 import { enhancers } from "../enhancers";
 import { resolveRenderer } from "../components/ResolveRenderer";
@@ -53,6 +58,7 @@ export async function getStaticProps(context) {
 
   const { composition } = await client.getCompositionBySlug({
     slug: "/",
+    state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   });
 
   await enhance({
