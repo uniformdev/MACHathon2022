@@ -3,6 +3,7 @@ import Head from "next/head";
 import { CanvasClient, enhance, CANVAS_DRAFT_STATE } from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
 import { enhancers } from "../../enhancers";
+import dynamicProduct from "../../enhancers/dynamic-product";
 import { resolveRenderer } from "../../components/ResolveRenderer";
 import GlobalHeader from "../../components/GlobalHeader";
 import GlobalFooter from "../../components/GlobalFooter";
@@ -43,10 +44,7 @@ export async function getStaticProps(context) {
   let composition;
 
   if (slug === "/pdp/bundle") {
-    const data = await fetch(
-      "http://localhost:3000/api/product?slug=/pdp/bundle"
-    );
-    composition = await data.json();
+    composition = await dynamicProduct("/pdp/bundle");
   } else {
     const data = await client.getCompositionBySlug({
       slug,
@@ -77,6 +75,6 @@ export const getStaticPaths = () => {
       "/pdp/eye-contour",
       "/pdp/bundle",
     ],
-    fallback: true,
+    fallback: false,
   };
 };
