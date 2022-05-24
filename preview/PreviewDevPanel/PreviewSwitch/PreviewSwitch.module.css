@@ -1,0 +1,16 @@
+.preview-switch-button {
+  background: #e42535;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.preview-switch-button-on {
+  border: 2px solid #fff;
+}
+
+.preview-switch-button-off {
+  opacity: 0.5;
+}

@@ -1,0 +1,12 @@
+.panel {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.panel > div {
+  margin: 5px;
+}

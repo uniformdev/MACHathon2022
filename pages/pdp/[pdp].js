@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import { CanvasClient, enhance, CANVAS_DRAFT_STATE } from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
@@ -7,8 +8,13 @@ import dynamicProduct from "../../enhancers/dynamic-product";
 import { resolveRenderer } from "../../components/ResolveRenderer";
 import GlobalHeader from "../../components/GlobalHeader";
 import GlobalFooter from "../../components/GlobalFooter";
+import previewEnabled from "../preview/previewEnabled";
 
-export default function PdpPage({ composition }) {
+const PreviewDevPanel = dynamic(() =>
+  import("../preview/PreviewDevPanel/PreviewDevPanel")
+);
+
+export default function PdpPage({ preview, composition }) {
   return (
     <div>
       <Head>
@@ -27,12 +33,19 @@ export default function PdpPage({ composition }) {
           <Slot name="main" />
         </main>
         <GlobalFooter />
+
+        {previewEnabled() && (
+          <PreviewDevPanel preview={preview} composition={composition} />
+        )}
       </Composition>
     </div>
   );
 }
 
 export async function getStaticProps(context) {
+  const { preview } = context;
+  const previewActive = Boolean(preview);
+
   const pdp = context?.params?.pdp;
   const slug = `/pdp/${pdp}`;
 
@@ -50,6 +63,7 @@ export async function getStaticProps(context) {
     const data = await client.getCompositionBySlug({
       slug,
       state: CANVAS_DRAFT_STATE,
+      context: { preview },
     });
 
     composition = data.composition;
@@ -64,6 +78,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       composition,
+      preview: previewActive,
     },
   };
 }
@@ -76,6 +91,6 @@ export const getStaticPaths = () => {
       "/pdp/eye-contour",
       "/pdp/bundle",
     ],
-    fallback: false,
+    fallback: previewActive,
   };
 };

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import { CanvasClient, enhance } from "@uniformdev/canvas";
 import { Composition, Slot } from "@uniformdev/canvas-react";
@@ -6,8 +7,13 @@ import { enhancers } from "../enhancers";
 import { resolveRenderer } from "../components/ResolveRenderer";
 import GlobalHeader from "../components/GlobalHeader";
 import GlobalFooter from "../components/GlobalFooter";
+import previewEnabled from "../preview/previewEnabled";
 
-export default function IndexPage({ composition }) {
+const PreviewDevPanel = dynamic(() =>
+  import("../preview/PreviewDevPanel/PreviewDevPanel")
+);
+
+export default function IndexPage({ preview, composition }) {
   return (
     <div>
       <Head>
@@ -26,12 +32,19 @@ export default function IndexPage({ composition }) {
           <Slot name="main" />
         </main>
         <GlobalFooter />
+
+        {previewEnabled() && (
+          <PreviewDevPanel preview={preview} composition={composition} />
+        )}
       </Composition>
     </div>
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const { preview } = context;
+  const previewActive = Boolean(preview);
+
   const client = new CanvasClient({
     apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
@@ -45,12 +58,13 @@ export async function getStaticProps() {
   await enhance({
     composition,
     enhancers,
-    context: {},
+    context: { preview },
   });
 
   return {
     props: {
       composition,
+      preview: previewActive,
     },
   };
 }

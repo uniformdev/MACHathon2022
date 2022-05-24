@@ -1,0 +1,54 @@
+.composition-button {
+  background: #7ad7da;
+  color: #1d3557;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.composition-button-on {
+  border: 2px solid #fff;
+}
+
+.composition-button-off {
+  opacity: 0.5;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 60px 20px 0;
+  background-color: rgba(255,255,255,0.93);
+  font-size: 16px;
+  color: #000;
+}
+
+.sidenav-open {
+  width: 80%;
+}
+
+.sidenav-close {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #aaa;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.sidenav-close:hover {
+  color: #000;
+}
