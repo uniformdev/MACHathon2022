@@ -13,6 +13,7 @@ export default function IndexPage({ composition }) {
       <Head>
         <title>skncre - MACHathon2022</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="skncre - MACHathon2022"></meta>
       </Head>
 
       <Composition

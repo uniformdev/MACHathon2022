@@ -32,7 +32,7 @@ export default function ProductDetail({ component }) {
             <span className="block text-primary font-semibold text-6xl">
               your
             </span>
-            <span className="block text-light font-semibold text-6xl ml-8 -mt-2">
+            <span className="block text-dark font-semibold text-6xl ml-8 -mt-2">
               {name}
             </span>
           </h1>
@@ -46,7 +46,7 @@ export default function ProductDetail({ component }) {
       </div>
       <div className="grid grid-cols-2 gap-8 mx-16">
         <div className="pr-2">
-          <h3 className="text-3xl font-semibold mb-4">product description</h3>
+          <h2 className="text-3xl font-semibold mb-4">product description</h2>
           <article dangerouslySetInnerHTML={{ __html: product_description }} />
         </div>
         <div className="pl-2">
