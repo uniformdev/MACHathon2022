@@ -8,10 +8,10 @@ import dynamicProduct from "../../enhancers/dynamic-product";
 import { resolveRenderer } from "../../components/ResolveRenderer";
 import GlobalHeader from "../../components/GlobalHeader";
 import GlobalFooter from "../../components/GlobalFooter";
-import previewEnabled from "../preview/previewEnabled";
+import previewEnabled from "../../preview/previewEnabled";
 
 const PreviewDevPanel = dynamic(() =>
-  import("../preview/PreviewDevPanel/PreviewDevPanel")
+  import("../../preview/PreviewDevPanel/PreviewDevPanel")
 );
 
 export default function PdpPage({ preview, composition }) {
@@ -63,7 +63,6 @@ export async function getStaticProps(context) {
     const data = await client.getCompositionBySlug({
       slug,
       state: CANVAS_DRAFT_STATE,
-      context: { preview },
     });
 
     composition = data.composition;
@@ -91,6 +90,6 @@ export const getStaticPaths = () => {
       "/pdp/eye-contour",
       "/pdp/bundle",
     ],
-    fallback: previewActive,
+    fallback: false,
   };
 };

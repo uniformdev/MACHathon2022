@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import getConfig from "next/config";
 import styles from "./PreviewSwitch.module.css";
 
@@ -26,17 +26,22 @@ function PreviewSwitch({ previewing }) {
   const {
     publicRuntimeConfig: { previewSecret },
   } = getConfig();
-  return (
-    <button
-      title="Preview toggle"
-      type="button"
-      onClick={() => {
-        const url = `/api/preview?slug=${router.asPath}${
-          previewing ? "&disable=1" : `&secret=${previewSecret}`
-        }`;
 
-        router.push(url);
-      }}
+  const [buttonUrl, setButtonUrl] = useState("");
+
+  useEffect(() => {
+    setButtonUrl(
+      `${window?.location.origin}/api/preview?slug=${router.asPath}${
+        previewing ? "&disable=1" : `&secret=${previewSecret}`
+      }`
+    );
+  }, [previewSecret, previewing, router.asPath]);
+
+  return (
+    <a
+      href={buttonUrl}
+      title="Preview toggle"
+      type="submit"
       className={[
         styles["preview-switch-button"],
         previewing
@@ -45,7 +50,7 @@ function PreviewSwitch({ previewing }) {
       ].join(" ")}
     >
       {previewing ? <OnlineIcon /> : <OfflineIcon />}
-    </button>
+    </a>
   );
 }
 
