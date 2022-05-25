@@ -3,26 +3,8 @@ import { useEffect, useState } from "react";
 import getConfig from "next/config";
 import styles from "./PreviewSwitch.module.css";
 
-// lazy preview function that polls when next preview mode is on,
-// reloading static props every 2s. Need to update this to something that doesn't poll
-// (cross-domain iframe comms?)
-function usePreview(previewing) {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!previewing) {
-      return;
-    }
-    const timer = setTimeout(async () => {
-      router.replace(router.asPath, undefined, { scroll: false });
-    }, 2000);
-    return () => clearTimeout(timer);
-  });
-}
-
 function PreviewSwitch({ previewing }) {
   const router = useRouter();
-  usePreview(previewing);
   const {
     publicRuntimeConfig: { previewSecret },
   } = getConfig();

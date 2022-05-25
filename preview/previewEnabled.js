@@ -6,8 +6,5 @@ export default function previewEnabled() {
   } = getConfig();
   const previewEnabledBool =
     previewEnabled === true || previewEnabled === "true";
-  console.log(
-    previewEnabledBool ? "🥽 Preview enabled ✅" : "🥽 Preview disabled ⛔"
-  );
   return previewEnabledBool;
 }
