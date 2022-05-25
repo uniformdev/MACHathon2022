@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import next from "next";
 import { useCallback, useEffect } from "react";
 import { useCompositionEventEffect } from "@uniformdev/canvas-react";
 
@@ -14,6 +15,14 @@ function useLivePreviewNextStaticProps(options) {
 
   const effect = useCallback(() => {
     console.log("🥽 Preview updated.", router.asPath);
+
+    // Can be removed after https://github.com/vercel/next.js/issues/37190 is resolved
+    delete next.router.sdc[
+      new URL(
+        `/_next/data/${window.__NEXT_DATA__.buildId}${router.asPath}.json`,
+        location.href
+      ).toString()
+    ];
     router.replace(router.asPath, undefined, { scroll: false });
   }, [router]);
 
