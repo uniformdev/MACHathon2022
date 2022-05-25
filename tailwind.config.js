@@ -12,7 +12,7 @@ module.exports = {
       light: process.env.THEME_COLOR_LIGHT,
       dark: process.env.THEME_COLOR_DARK,
       primary: process.env.THEME_COLOR_PRIMARY,
-      secondary: process.env.THEME_COLOR_SECONDAIRY,
+      secondary: process.env.THEME_COLOR_SECONDARY,
       tertiary: process.env.THEME_COLOR_TERTIARY,
     },
     fontFamily: {
