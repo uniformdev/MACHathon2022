@@ -87,14 +87,22 @@ export async function getStaticProps(context) {
   };
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
+  const client = new CanvasClient({
+    apiKey: process.env.UNIFORM_API_KEY,
+    projectId: process.env.UNIFORM_PROJECT_ID,
+    apiHost: process.env.UNIFORM_API_HOST,
+  });
+
+  const pages = await client.getCompositionList({
+    skipEnhance: true,
+  });
+
   return {
-    paths: [
-      "/pdp/face-serum",
-      "/pdp/face-cream",
-      "/pdp/eye-contour",
-      "/pdp/bundle",
-    ],
+    paths: pages.compositions
+      .filter((c) => c.composition._slug.startsWith("/pdp/"))
+      .map((c) => c.composition._slug)
+      .filter((slug) => slug),
     fallback: false,
   };
 };

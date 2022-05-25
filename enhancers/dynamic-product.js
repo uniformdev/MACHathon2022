@@ -76,7 +76,7 @@ export default async function dynamicProduct(slug, preview) {
   });
 
   const { composition } = await canvasClient.getCompositionBySlug({
-    slug: "/dynamic-product",
+    slug: "/pdp/bundle",
     state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   });
 
