@@ -16,7 +16,11 @@ module.exports = {
       tertiary: process.env.THEME_COLOR_TERTIARY,
     },
     fontFamily: {
-      sans: [process.env.THEME_FONT_FAMILY_NAME, "sans-serif"],
+      sans: [
+        process.env.THEME_FONT_FAMILY_NAME,
+        // Lora is a sans-serif font
+        process.env.THEME_FONT_FAMILY_NAME === "Lora" ? "serif" : "sans-serif",
+      ],
     },
   },
 };
