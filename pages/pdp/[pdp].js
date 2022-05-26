@@ -103,6 +103,5 @@ export const getStaticPaths = async () => {
       .filter((c) => c.composition._slug.startsWith("/pdp/"))
       .map((c) => c.composition._slug)
       .filter((slug) => slug),
-    fallback: false,
   };
 };
