@@ -11,7 +11,10 @@ export default async function handler(req, res) {
     `${req.headers.host.includes("localhost") ? "http" : "https"}://${
       req.headers.host
     }/api/revalidate?secret=${process.env.NEXT_REVALIDATE_SECRET}`
-  );
+  ).catch(() => {});
+
+  // Wait for 500ms to give chance to the fetch to establish connection
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return res.status(200).send();
 }

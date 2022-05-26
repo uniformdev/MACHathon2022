@@ -6,6 +6,9 @@ export default async function handler(req, res) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
+  // Wait for 2 seconds to avoid hitting any caches
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   try {
     const client = new CanvasClient({
       apiKey: process.env.UNIFORM_API_KEY,
