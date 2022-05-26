@@ -10,21 +10,21 @@ const GlobalHeader = () => {
         className="mx-auto h-20 flex justify-between"
         style={{ maxWidth: "1440px" }}
       >
-        <Link href="/" prefetch={!router.isPreview}>
+        <Link href="/">
           <a className="text-light font-semibold text-3xl mt-5 ml-8">skncre</a>
         </Link>
 
         <nav className="mt-6 mr-8 text-xl space-x-6 hidden sm:block">
-          <Link href="/pdp/face-serum" prefetch={!router.isPreview}>
+          <Link href="/pdp/face-serum">
             <a className="text-light">face serum</a>
           </Link>
-          <Link href="/pdp/face-cream" prefetch={!router.isPreview}>
+          <Link href="/pdp/face-cream">
             <a className="text-light">face cream</a>
           </Link>
-          <Link href="/pdp/eye-contour" prefetch={!router.isPreview}>
+          <Link href="/pdp/eye-contour">
             <a className="text-light">eye contour</a>
           </Link>
-          <Link href="/pdp/bundle" prefetch={!router.isPreview}>
+          <Link href="/pdp/bundle">
             <a className="text-light">skncre bundle</a>
           </Link>
         </nav>
