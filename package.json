@@ -10,7 +10,8 @@
     "pull:components": "uniform presentation component pull ./data/definitions",
     "pull:compositions": "uniform presentation composition pull ./data/compositions",
     "push:components": "uniform presentation component push ./data/definitions",
-    "push:compositions": "uniform presentation composition push ./data/compositions"
+    "push:compositions": "uniform presentation composition push ./data/compositions",
+    "uniform:manifest": "uniform context manifest download --output ./lib/contextManifest.json"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -20,6 +21,8 @@
     "@uniformdev/canvas-contentstack": "^16.0.0",
     "@uniformdev/canvas-react": "^16.0.0",
     "@uniformdev/cli": "^16.0.0",
+    "@uniformdev/context": "^16.0.0",
+    "@uniformdev/context-react": "^16.0.0",
     "autoprefixer": "^10.4.7",
     "contentstack": "^3.15.1",
     "next": "12.1.6",
