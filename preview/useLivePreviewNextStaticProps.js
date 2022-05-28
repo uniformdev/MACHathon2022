@@ -19,7 +19,9 @@ function useLivePreviewNextStaticProps(options) {
     // Can be removed after https://github.com/vercel/next.js/issues/37190 is resolved
     delete next.router.sdc[
       new URL(
-        `/_next/data/${window.__NEXT_DATA__.buildId}${router.asPath}.json`,
+        `/_next/data/${window.__NEXT_DATA__.buildId}${
+          router.asPath === "/" ? "/index" : router.asPath
+        }.json`,
         location.href
       ).toString()
     ];
