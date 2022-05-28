@@ -1,5 +1,3 @@
-console.log("Build time env font:", process.env.THEME_FONT_FAMILY_NAME);
-
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
