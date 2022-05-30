@@ -7,27 +7,27 @@ export default function ProductDetail({ component }) {
   return (
     <section className="bg-light product-detail pb-12">
       <div className="grid grid-cols-2">
-        <Parallax speed={-10}>
-          <img
-            width={540}
-            height={540}
-            src={images[0]}
-            alt={name}
-            className="aspect-[1/1]"
-          />
-        </Parallax>
-        <Parallax speed={-10}>
-          <img
-            width={625}
-            height={1013}
-            src={images[3]}
-            alt={name}
-            className="aspect-[1/1]"
-          />
-        </Parallax>
+        <img
+          width={540}
+          height={540}
+          src={images[0]}
+          alt={name}
+          className="aspect-[1/1]"
+        />
+
+        <img
+          width={625}
+          height={1013}
+          src={images[3]}
+          alt={name}
+          className="aspect-[1/1]"
+        />
       </div>
-      <div className="flex mx-16 mb-12 ">
-        <Parallax speed={3} className="bg-secondary p-8 -mt-12 flex-1 w-2/4">
+      <div className="flex flex-col md:flex-row mx-4 lg:mx-16 mb-12">
+        <Parallax
+          speed={3}
+          className="bg-secondary p-8 md:-mt-12 flex-1 w-full md:w-2/4"
+        >
           <h1>
             <span className="block text-primary font-semibold text-6xl">
               your
@@ -37,14 +37,17 @@ export default function ProductDetail({ component }) {
             </span>
           </h1>
         </Parallax>
-        <Parallax speed={3} className="bg-tertiary p-8 -mt-12 w-2/4">
+        <Parallax
+          speed={3}
+          className="bg-tertiary p-8 md:-mt-12 w-full md:w-2/4"
+        >
           <p className="text-5xl font-semibold mb-4">&euro;{price}</p>
           <a href={`/api/addtocart?productId=${id}`} className="cta">
             {ctaText?.value || "add to cart"}
           </a>
         </Parallax>
       </div>
-      <div className="grid grid-cols-2 gap-8 mx-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-8 md:mx-16">
         <div className="pr-2">
           <h2 className="text-3xl font-semibold mb-4">product description</h2>
           <article dangerouslySetInnerHTML={{ __html: product_description }} />

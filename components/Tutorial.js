@@ -26,7 +26,11 @@ export default function Tutorial({ component }) {
         className="absolute"
       />
 
-      <Parallax speed={10} className="max-w-2xl absolute top-56 left-32">
+      <Parallax
+        speed={10}
+        className="max-w-2xl absolute md:top-24 lg:56 left-28"
+      >
+        <h1 className="text-6xl mb-12">{title}</h1>
         <ul>{stepsRendered}</ul>
       </Parallax>
     </section>
