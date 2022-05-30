@@ -1,6 +1,7 @@
 import { Slot } from "@uniformdev/canvas-react";
 
 export default function Editorial({ component }) {
+  console.log(component.parameters.cloudinary.value[0]);
   const { srcset, alt, width, height } =
     component.parameters.cloudinary.value[0];
   return (
@@ -15,7 +16,7 @@ export default function Editorial({ component }) {
         alt={alt}
         width={width}
         height={height}
-        className="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12"
+        className="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12  object-cover"
       />
     </section>
   );
