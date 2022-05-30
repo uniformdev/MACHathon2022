@@ -1,14 +1,21 @@
 import { Parallax } from "react-scroll-parallax";
 
 export default function Routine({ component }) {
-  const { srcset } = component.parameters.cloudinary.value[0];
+  const { srcset, alt, width, height } =
+    component.parameters.cloudinary.value[0];
   const url = component.parameters.url.value;
   const { chapeau, copy, cta, title } = component.parameters.entry.value;
 
   return (
     <section className="py-16 relative bg-light">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="lg:w-2/4" srcSet={srcset} alt={title} />
+      <img
+        className="lg:w-2/4"
+        srcSet={srcset}
+        alt={alt}
+        width={width}
+        height={height}
+      />
 
       <Parallax
         speed={5}

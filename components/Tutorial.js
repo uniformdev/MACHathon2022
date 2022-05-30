@@ -1,7 +1,8 @@
 import { Parallax } from "react-scroll-parallax";
 
 export default function Tutorial({ component }) {
-  const { srcset } = component.parameters.cloudinary.value[0];
+  const { srcset, alt, width, height } =
+    component.parameters.cloudinary.value[0];
 
   const { title, steps } = component.parameters.entry.value;
 
@@ -21,7 +22,9 @@ export default function Tutorial({ component }) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         srcSet={srcset}
-        alt={title}
+        alt={alt}
+        width={width}
+        height={height}
         className="absolute h-full w-full object-cover"
       />
 

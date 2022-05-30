@@ -4,7 +4,8 @@ import { Parallax } from "react-scroll-parallax";
 export default function ProductHighlight({ component }) {
   const { name, description } = component.parameters.entry.value;
   const { url, ctaText, theme } = component.parameters;
-  const { srcset } = component.parameters.cloudinary.value[0];
+  const { alt, srcset, width, height } =
+    component.parameters.cloudinary.value[0];
   const variant = component?.variant || "default";
 
   return (
@@ -12,7 +13,9 @@ export default function ProductHighlight({ component }) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         srcSet={srcset}
-        alt="rediscover your skin"
+        alt={alt}
+        width={width}
+        height={height}
         className="md:absolute md:object-cover"
       />
       <Parallax

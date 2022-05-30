@@ -5,17 +5,18 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link href={process.env.THEME_FONT_FAMILY_SOURCE} rel="stylesheet" />
+          <link
+            href={process.env.THEME_FONT_FAMILY_SOURCE}
+            rel="preload"
+            as="style"
+            onLoad="this.rel='stylesheet'"
+          />
           <link rel="preconnect" href="https://res.cloudinary.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin="true"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-            rel="stylesheet"
           />
 
           <link
