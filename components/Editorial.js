@@ -3,8 +3,8 @@ import { Slot } from "@uniformdev/canvas-react";
 export default function Editorial({ component }) {
   const { srcset } = component.parameters.cloudinary.value[0];
   return (
-    <section className="flex bg-light justify-between p-12">
-      <div className="flex flex-col items-stretch w-2/4">
+    <section className="flex flex-col lg:flex-row bg-light justify-between p-8 lg:p-12">
+      <div className="flex flex-col items-stretch w-full lg:w-2/4">
         <Slot name="callsToAction" />
       </div>
 
@@ -13,7 +13,7 @@ export default function Editorial({ component }) {
         height={1013}
         srcSet={srcset}
         alt="rediscover your skin"
-        className="w-2/4 ml-12"
+        className="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12"
       />
     </section>
   );

@@ -7,10 +7,10 @@ export default function Cta({ component }) {
   return (
     <div className="w-full mb-12 bg-tertiary p-8">
       <h3 className="mb-8">
-        <span className="block text-primary font-semibold text-6xl">
+        <span className="block text-primary font-semibold text-4xl md:text-6xl">
           {chapeau}
         </span>
-        <span className="block text-dark font-semibold text-6xl ml-8 -mt-2">
+        <span className="block text-dark font-semibold text-4xl md:text-6xl ml-8 -mt-2">
           {title}
         </span>
       </h3>

@@ -8,7 +8,7 @@ export default function Routine({ component }) {
   return (
     <section className="py-16 relative bg-light">
       <img
-        className="w-2/4"
+        className="lg:w-2/4"
         width={805}
         height={535}
         srcSet={srcset}
@@ -17,13 +17,13 @@ export default function Routine({ component }) {
 
       <Parallax
         speed={5}
-        className="bg-tertiary p-8 max-w-2xl absolute top-32 right-32"
+        className="w-full bg-tertiary p-8 lg:max-w-2xl lg:absolute top-32 right-32"
       >
         <h2 className="mb-8">
-          <span className="block text-primary font-semibold text-6xl">
+          <span className="block text-primary font-semibold text-4xl lg:text-6xl">
             {chapeau}
           </span>
-          <span className="block text-dark font-semibold text-6xl ml-8 -mt-2">
+          <span className="block text-dark font-semibold text-4xl lg:text-6xl ml-8 -mt-2">
             {title}
           </span>
         </h2>

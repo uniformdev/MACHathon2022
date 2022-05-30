@@ -8,22 +8,24 @@ export default function ProductHighlight({ component }) {
   const variant = component?.variant || "default";
 
   return (
-    <section className="aspect-[1440/722] relative">
+    <section className="md:aspect-[1440/722] relative">
       <img
         width={1440}
         height={722}
         srcSet={srcset}
         alt="rediscover your skin"
-        className="absolute"
+        className="md:absolute"
       />
       <Parallax
         speed={10}
-        className={`max-w-2xl absolute top-56 ${
-          variant === "imageLeft" ? "right-44" : "left-44"
+        className={`p-8 md:p-0 md:max-w-md lg:max-w-2xl md:absolute md:top-24 lg:top-56 ${
+          variant === "imageLeft"
+            ? "md:right-16 lg:right-44"
+            : "md:left-16 lg:left-44"
         }`}
       >
         <h2 className="mb-8">
-          <span className="block text-primary font-semibold text-6xl">
+          <span className="block text-primary font-semibold text-4xl md:text-6xl">
             your
           </span>
           <span

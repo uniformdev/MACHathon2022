@@ -18,12 +18,15 @@ const Card = ({ product }) => {
             {product.ctaText}
           </button>
 
-          <Parallax speed={3} className="absolute -bottom-6 left-8">
+          <Parallax
+            speed={3}
+            className="absolute top-6 md:top-auto md:-bottom-6 left-8"
+          >
             <h3>
-              <span className="block text-primary font-semibold text-6xl">
+              <span className="block text-primary font-semibold text-4xl md:text-6xl">
                 your
               </span>
-              <span className="block text-dark font-semibold text-6xl ml-8 -mt-2">
+              <span className="block text-dark font-semibold text-4xl md:text-6xl ml-8 -mt-2">
                 {product.name}
               </span>
             </h3>
