@@ -8,7 +8,7 @@ export default function ProductList({ component }) {
         {title.value}
       </h3>
 
-      <div className="grid grid-cols-2 gap-12 mx-12 pb-32">
+      <div className="grid gap-6 mx-12 pb-32 md:grid-cols-2 lg:gap-12">
         <Slot name="product1" />
         <Slot name="product2" />
       </div>

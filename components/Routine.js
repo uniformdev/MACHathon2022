@@ -7,13 +7,8 @@ export default function Routine({ component }) {
 
   return (
     <section className="py-16 relative bg-light">
-      <img
-        className="lg:w-2/4"
-        width={805}
-        height={535}
-        srcSet={srcset}
-        alt={title}
-      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="lg:w-2/4" srcSet={srcset} alt={title} />
 
       <Parallax
         speed={5}

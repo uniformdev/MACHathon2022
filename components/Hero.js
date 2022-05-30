@@ -1,7 +1,7 @@
 import { Parallax } from "react-scroll-parallax";
 
 export default function Hero({ component }) {
-  const { srcset } = component.parameters.cloudinary?.value[0];
+  const { alt, srcset } = component.parameters.cloudinary?.value[0];
   const { title, subtitle } = component.parameters.entry.value;
   const titleParts = title.split("your");
 
@@ -9,13 +9,7 @@ export default function Hero({ component }) {
     <section className="md:aspect-[1440/632] relative">
       {srcset ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
-          width={1440}
-          height={632}
-          srcSet={srcset}
-          alt="rediscover your skin"
-          className="md:absolute"
-        />
+        <img srcSet={srcset} alt={alt} className="md:absolute" />
       ) : null}
       <Parallax
         className="p-8 md:p-0 md:absolute md:max-w-md lg:max-w-xl md:top-28 md:left-12 lg:top-44 lg:left-56"

@@ -6,9 +6,8 @@ const Card = ({ product }) => {
     <div className="bg-tertiary aspect-[1/1] relative">
       <Link href={product.url}>
         <a className="block absolute w-full h-full top-0 left-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            width={540}
-            height={540}
             src={product.images[0]}
             alt={product.name}
             className="absolute w-100 h-auto"
@@ -26,7 +25,7 @@ const Card = ({ product }) => {
               <span className="block text-primary font-semibold text-4xl md:text-6xl">
                 your
               </span>
-              <span className="block text-dark font-semibold text-4xl md:text-6xl ml-8 -mt-2">
+              <span className="block text-dark font-semibold text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2">
                 {product.name}
               </span>
             </h3>

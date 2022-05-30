@@ -17,19 +17,15 @@ export default function Tutorial({ component }) {
   ));
 
   return (
-    <section className="aspect-[1440/978] relative">
+    <section className="relative">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        width={1440}
-        height={978}
         srcSet={srcset}
         alt={title}
-        className="absolute"
+        className="absolute h-full w-full object-cover"
       />
 
-      <Parallax
-        speed={10}
-        className="max-w-2xl absolute md:top-24 lg:56 left-28"
-      >
+      <Parallax speed={10} className="max-w-2xl px-12 py-24 md:px-24 md:py-36">
         <h1 className="text-6xl mb-12">{title}</h1>
         <ul>{stepsRendered}</ul>
       </Parallax>

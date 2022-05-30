@@ -7,21 +7,11 @@ export default function ProductDetail({ component }) {
   return (
     <section className="bg-light product-detail pb-12">
       <div className="grid grid-cols-2">
-        <img
-          width={540}
-          height={540}
-          src={images[0]}
-          alt={name}
-          className="aspect-[1/1]"
-        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={images[0]} alt={name} className="aspect-[1/1] object-cover" />
 
-        <img
-          width={625}
-          height={1013}
-          src={images[3]}
-          alt={name}
-          className="aspect-[1/1]"
-        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={images[3]} alt={name} className="aspect-[1/1] object-cover" />
       </div>
       <div className="flex flex-col md:flex-row mx-4 lg:mx-16 mb-12">
         <Parallax

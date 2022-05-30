@@ -10,12 +10,12 @@ export default function Cta({ component }) {
         <span className="block text-primary font-semibold text-4xl md:text-6xl">
           {chapeau}
         </span>
-        <span className="block text-dark font-semibold text-4xl md:text-6xl ml-8 -mt-2">
+        <span className="block text-dark font-semibold text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2">
           {title}
         </span>
       </h3>
 
-      <p className="text-xl ml-8 mb-8">{copy}</p>
+      <p className="text-xl sm:ml-8 mb-8">{copy}</p>
       <Link href={url.value}>
         <a className="inline-block cta ml-8">{cta_text}</a>
       </Link>

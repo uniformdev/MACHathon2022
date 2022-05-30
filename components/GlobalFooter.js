@@ -1,21 +1,18 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const GlobalHeader = () => {
-  const router = useRouter();
-
+const GlobalFooter = () => {
   return (
-    <header className="bg-dark h-72 mx-auto" style={{ maxWidth: "1440px" }}>
-      <div className="mx-auto max-w-screen-xl flex flex-col justify-between text-center pt-24">
+    <footer className="bg-dark mx-auto" style={{ maxWidth: "1440px" }}>
+      <div className="mx-auto flex flex-wrap gap-4 justify-between items-center px-5 py-5 md:py-8">
         <Link href="/">
           <a className="text-light font-semibold text-3xl">skncre</a>
         </Link>
-        <nav className="mt-6 mr-5 text-xl space-x-6 hidden sm:block">
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 items-center md:text-xl">
           <Link href="/pdp/face-serum">
-            <a className="text-light">serum</a>
+            <a className="text-light">face serum</a>
           </Link>
           <Link href="/pdp/face-cream">
-            <a className="text-light">cream</a>
+            <a className="text-light">face cream</a>
           </Link>
           <Link href="/pdp/eye-contour">
             <a className="text-light">eye contour</a>
@@ -25,8 +22,8 @@ const GlobalHeader = () => {
           </Link>
         </nav>
       </div>
-    </header>
+    </footer>
   );
 };
 
-export default GlobalHeader;
+export default GlobalFooter;

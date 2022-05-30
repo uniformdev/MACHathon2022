@@ -8,9 +8,8 @@ export default function Editorial({ component }) {
         <Slot name="callsToAction" />
       </div>
 
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        width={625}
-        height={1013}
         srcSet={srcset}
         alt="rediscover your skin"
         className="w-full lg:w-2/4 mt-8 lg:mt-0 lg:ml-12"

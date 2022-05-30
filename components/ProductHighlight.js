@@ -9,12 +9,11 @@ export default function ProductHighlight({ component }) {
 
   return (
     <section className="md:aspect-[1440/722] relative">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        width={1440}
-        height={722}
         srcSet={srcset}
         alt="rediscover your skin"
-        className="md:absolute"
+        className="md:absolute md:object-cover"
       />
       <Parallax
         speed={10}
@@ -31,7 +30,7 @@ export default function ProductHighlight({ component }) {
           <span
             className={`${
               theme.value === "light" ? "text-light" : "text-dark"
-            } font-semibold text-6xl ml-8 -mt-2 block`}
+            } font-semibold text-3xl sm:text-4xl md:text-6xl sm:ml-8 sm:-mt-2 block`}
           >
             {name}
           </span>
