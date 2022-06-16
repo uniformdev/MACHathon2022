@@ -5,10 +5,10 @@ icon: collage
 parameters:
   - id: cloudinary
     name: cloudinary
-    type: cloudinary-parameter
-    helpText: ''
+    type: cloudinary-media-selector
+    helpText: ""
     typeConfig:
-      ratio: '625:1013'
+      ratio: "625:1013"
       widths: 600,700,800,900
       defaultoptions: q_auto,f_auto
 useTeamPermissions: true
@@ -19,7 +19,7 @@ slots:
       - cta
       - productCard
     inheritAllowedComponents: false
-titleParameter: ''
+titleParameter: ""
 canBeComposition: false
-created: '2022-05-18T12:22:40.978876+00:00'
-updated: '2022-05-20T14:50:51.657873+00:00'
+created: "2022-05-18T12:22:40.978876+00:00"
+updated: "2022-05-20T14:50:51.657873+00:00"

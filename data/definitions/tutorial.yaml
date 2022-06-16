@@ -5,16 +5,16 @@ icon: screen
 parameters:
   - id: cloudinary
     name: Cloudinary
-    type: cloudinary-parameter
-    helpText: ''
+    type: cloudinary-media-selector
+    helpText: ""
     typeConfig:
-      ratio: '1440:978'
+      ratio: "1440:978"
       widths: 400,900,1280
       defaultoptions: q_auto,f_auto
   - id: entry
     name: entry
     type: contentstackEntrySelector
-    helpText: ''
+    helpText: ""
     typeConfig:
       allowedContentTypes:
         tutorial:
@@ -34,19 +34,19 @@ parameters:
             - uid: steps
               schema:
                 - uid: step
-                  format: ''
+                  format: ""
                   unique: false
                   multiple: false
                   data_type: text
                   mandatory: false
                   display_name: step
                   error_messages:
-                    format: ''
+                    format: ""
                   field_metadata:
                     version: 3
                     multiline: true
-                    description: ''
-                    default_value: ''
+                    description: ""
+                    default_value: ""
                   non_localizable: false
               unique: false
               multiple: true
@@ -54,8 +54,8 @@ parameters:
               mandatory: false
               display_name: Steps
               field_metadata:
-                description: ''
-                instruction: ''
+                description: ""
+                instruction: ""
               non_localizable: false
           SYS_ACL:
             roles:
@@ -111,8 +111,8 @@ parameters:
             get_one_object: true
             get_all_objects: true
             delete_all_objects: true
-          created_at: '2022-05-19T12:24:29.471Z'
-          updated_at: '2022-05-19T12:26:22.820Z'
+          created_at: "2022-05-19T12:24:29.471Z"
+          updated_at: "2022-05-19T12:26:22.820Z"
           DEFAULT_ACL:
             users:
               - uid: bltc3f01e41bd08ef3f
@@ -122,13 +122,13 @@ parameters:
             others:
               read: false
               create: false
-          description: 'How to apply tutorial '
+          description: "How to apply tutorial "
           inbuilt_class: false
           last_activity: {}
           maintain_revisions: true
 useTeamPermissions: true
 slots: []
-titleParameter: ''
+titleParameter: ""
 canBeComposition: false
-created: '2022-05-19T12:29:22.835428+00:00'
-updated: '2022-05-20T14:50:51.657873+00:00'
+created: "2022-05-19T12:29:22.835428+00:00"
+updated: "2022-05-20T14:50:51.657873+00:00"

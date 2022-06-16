@@ -11,7 +11,7 @@ parameters:
   - id: ctaText
     name: cta text
     type: text
-    helpText: ''
+    helpText: ""
     typeConfig: null
   - id: url
     name: url
@@ -20,10 +20,10 @@ parameters:
     typeConfig: null
   - id: cloudinary
     name: cloudinary
-    type: cloudinary-parameter
-    helpText: ''
+    type: cloudinary-media-selector
+    helpText: ""
     typeConfig:
-      ratio: '1440:722'
+      ratio: "1440:722"
       widths: 1280,1440,1600
       defaultoptions: q_auto,f_auto
   - id: theme
@@ -39,10 +39,10 @@ parameters:
       required: true
 useTeamPermissions: true
 slots: []
-titleParameter: ''
+titleParameter: ""
 canBeComposition: false
-created: '2022-05-18T11:25:37.895923+00:00'
-updated: '2022-05-20T14:50:51.657873+00:00'
+created: "2022-05-18T11:25:37.895923+00:00"
+updated: "2022-05-20T14:50:51.657873+00:00"
 variants:
   - id: imageLeft
     name: image left

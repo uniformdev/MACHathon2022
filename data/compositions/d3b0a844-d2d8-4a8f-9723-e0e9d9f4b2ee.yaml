@@ -21,7 +21,7 @@ composition:
               entryUid: blt769fec8163004566
               contentTypeUid: tutorial
           cloudinary:
-            type: cloudinary-parameter
+            type: cloudinary-media-selector
             value:
               - alt: ""
                 url: >-
@@ -53,7 +53,7 @@ composition:
               entryUid: blt983998acc99d8d17
               contentTypeUid: routine
           cloudinary:
-            type: cloudinary-parameter
+            type: cloudinary-media-selector
             value:
               - alt: ""
                 url: >-

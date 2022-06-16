@@ -6,7 +6,7 @@ parameters:
   - id: entry
     name: Entry
     type: contentstackEntrySelector
-    helpText: ''
+    helpText: ""
     typeConfig:
       allowedContentTypes:
         hero:
@@ -24,18 +24,18 @@ parameters:
                 _default: true
               non_localizable: false
             - uid: subtitle
-              format: ''
+              format: ""
               unique: false
               multiple: false
               data_type: text
               mandatory: false
               display_name: Subtitle
               error_messages:
-                format: ''
+                format: ""
               field_metadata:
                 version: 3
-                description: ''
-                default_value: ''
+                description: ""
+                default_value: ""
               non_localizable: false
             - uid: image
               unique: false
@@ -52,7 +52,7 @@ parameters:
               display_name: Image
               field_metadata:
                 image: true
-                description: ''
+                description: ""
                 rich_text_type: standard
               non_localizable: false
           SYS_ACL:
@@ -109,8 +109,8 @@ parameters:
             get_one_object: true
             get_all_objects: true
             delete_all_objects: true
-          created_at: '2022-05-18T10:48:03.235Z'
-          updated_at: '2022-05-18T10:53:07.895Z'
+          created_at: "2022-05-18T10:48:03.235Z"
+          updated_at: "2022-05-18T10:53:07.895Z"
           DEFAULT_ACL:
             users:
               - uid: bltc3f01e41bd08ef3f
@@ -126,15 +126,15 @@ parameters:
           maintain_revisions: true
   - id: cloudinary
     name: Cloudinary
-    type: cloudinary-parameter
-    helpText: ''
+    type: cloudinary-media-selector
+    helpText: ""
     typeConfig:
-      ratio: '1440:632'
+      ratio: "1440:632"
       widths: 1000,1280,1440
       defaultoptions: q_auto,f_auto
 useTeamPermissions: true
 slots: []
-titleParameter: ''
+titleParameter: ""
 canBeComposition: false
-created: '2022-05-18T10:40:29.624467+00:00'
-updated: '2022-05-20T14:50:51.657873+00:00'
+created: "2022-05-18T10:40:29.624467+00:00"
+updated: "2022-05-20T14:50:51.657873+00:00"

@@ -73,7 +73,7 @@ function createSrcSet(
   return result.join(",");
 }
 
-export const CANVAS_CLOUDINARY_PARAMETER_TYPES = "cloudinary-parameter";
+export const CANVAS_CLOUDINARY_PARAMETER_TYPES = "cloudinary-media-selector";
 export const cloudinaryEnhancer = ({ parameter }) => {
   const result = parameter.value.map((media) => {
     return {

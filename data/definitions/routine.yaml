@@ -6,7 +6,7 @@ parameters:
   - id: entry
     name: entry
     type: contentstackEntrySelector
-    helpText: ''
+    helpText: ""
     typeConfig:
       allowedContentTypes:
         routine:
@@ -24,47 +24,47 @@ parameters:
                 _default: true
               non_localizable: false
             - uid: chapeau
-              format: ''
+              format: ""
               unique: false
               multiple: false
               data_type: text
               mandatory: false
               display_name: Chapeau
               error_messages:
-                format: ''
+                format: ""
               field_metadata:
                 version: 3
-                description: ''
+                description: ""
                 placeholder: your
-                default_value: ''
+                default_value: ""
               non_localizable: false
             - uid: copy
-              format: ''
+              format: ""
               unique: false
               multiple: false
               data_type: text
               mandatory: false
               display_name: Copy
               error_messages:
-                format: ''
+                format: ""
               field_metadata:
                 version: 3
-                description: ''
-                default_value: ''
+                description: ""
+                default_value: ""
               non_localizable: false
             - uid: cta
-              format: ''
+              format: ""
               unique: false
               multiple: false
               data_type: text
               mandatory: false
               display_name: CTA
               error_messages:
-                format: ''
+                format: ""
               field_metadata:
                 version: 3
-                description: ''
-                default_value: ''
+                description: ""
+                default_value: ""
               non_localizable: false
             - uid: image
               unique: false
@@ -81,7 +81,7 @@ parameters:
               display_name: Image
               field_metadata:
                 image: true
-                description: ''
+                description: ""
                 rich_text_type: standard
               non_localizable: false
           SYS_ACL:
@@ -138,8 +138,8 @@ parameters:
             get_one_object: true
             get_all_objects: true
             delete_all_objects: true
-          created_at: '2022-05-18T10:56:50.577Z'
-          updated_at: '2022-05-18T10:58:55.209Z'
+          created_at: "2022-05-18T10:56:50.577Z"
+          updated_at: "2022-05-18T10:58:55.209Z"
           DEFAULT_ACL:
             users:
               - uid: bltc3f01e41bd08ef3f
@@ -160,18 +160,18 @@ parameters:
     typeConfig: null
   - id: cloudinary
     name: Cloudinary
-    type: cloudinary-parameter
-    helpText: ''
+    type: cloudinary-media-selector
+    helpText: ""
     typeConfig:
-      ratio: '805:535'
+      ratio: "805:535"
       widths: 400,900,1280
       defaultoptions: q_auto,f_auto
 useTeamPermissions: true
 slots: []
-titleParameter: ''
+titleParameter: ""
 canBeComposition: false
-created: '2022-05-18T11:08:23.98355+00:00'
-updated: '2022-05-20T14:50:51.657873+00:00'
+created: "2022-05-18T11:08:23.98355+00:00"
+updated: "2022-05-20T14:50:51.657873+00:00"
 variants:
   - id: imageRight
     name: Image right
